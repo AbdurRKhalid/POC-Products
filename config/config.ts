@@ -6,6 +6,10 @@ const devConfig = {
 }
 
 const prodConfig = {
+    database: {
+        DB_USERNAME: 'poc-microservices',
+        DB_PASSWORD: 'microservices'
+    }
 }
 
 const env = process.env.NODE_ENV || 'dev';
