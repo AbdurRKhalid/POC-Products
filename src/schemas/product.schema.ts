@@ -18,7 +18,7 @@ export class Product {
     quantity: number;
 
     @Prop()
-    keywords: string;
+    keywords: string[];
     
 }
 
