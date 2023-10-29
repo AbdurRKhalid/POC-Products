@@ -1,25 +1,21 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import * as mongoose from 'mongoose';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Document } from "mongoose";
 
-export type ProductDocument = mongoose.HydratedDocument<Product>;
+export type ProductDocument = Product & Document;
 
-@Schema()
+@Schema({
+    timestamps: { createdAt: 'created' }
+})
+
 export class Product {
-    @Prop()
+    @Prop({ required: true })
     name: string;
 
-    @Prop()
+    @Prop({ required: true })
+    description: string;
+
+    @Prop({ required: true })
     price: number;
-
-    @Prop()
-    category: string;
-
-    @Prop()
-    quantity: number;
-
-    @Prop()
-    keywords: string[];
-    
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);
