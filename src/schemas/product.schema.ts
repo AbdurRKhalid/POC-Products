@@ -1,4 +1,4 @@
-import { Prop, Schema } from '@nestjs/mongoose';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
 
 export type ProductDocument = mongoose.HydratedDocument<Product>;
@@ -21,3 +21,5 @@ export class Product {
     keywords: string;
     
 }
+
+export const ProductSchema = SchemaFactory.createForClass(Product);
