@@ -19,4 +19,8 @@ export class ProductsService {
     async findAll(): Promise<ProductDocument[]> {
         return this.productModel.find();
     }
+
+    async delete(id: string) {
+        return this.productModel.deleteOne({_id: id});
+    }
 }
