@@ -23,4 +23,8 @@ export class ProductsService {
     async delete(id: string) {
         return this.productModel.deleteOne({_id: id});
     }
+
+    async findOne(id: string) {
+        return this.productModel.findOne({_id: id});
+    }
 }
