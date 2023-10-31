@@ -9,7 +9,7 @@ export class AddProductDto {
     @IsString()
     @IsNotEmpty()
     @MinLength(10)
-    descrition: string;
+    description: string;
 
     @IsNumber()
     @IsNotEmpty()
