@@ -14,4 +14,8 @@ export class AddProductDto {
     @IsNumber()
     @IsNotEmpty()
     price: number;
+
+    @IsNumber()
+    @IsNotEmpty()
+    quantity: number;
 }
